@@ -1,0 +1,10 @@
+logs
+*.log
+node_modules/
+.env
+.playwright/
+.DS_Store
+npm-debug.log*
+test-results
+.vscode/settings.json
+playwright-report/
