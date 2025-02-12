@@ -1,12 +1,14 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
-
-/** @type {import('eslint').Linter.Config[]} */
 export default [
-  {files: ["**/*.{js,mjs,cjs,ts}"]},
-  {languageOptions: { globals: globals.browser }},
+  { languageOptions: { globals: globals.node } },
   pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
+  eslintPluginPrettier,
+  {
+    rules: {
+      'capitalized-comments': ['error', 'always'],
+    },
+  },
 ];
