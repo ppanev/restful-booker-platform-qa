@@ -1,0 +1,9 @@
+node_modules
+dist
+*.min.js
+build
+.git
+*.log
+.vscode
+*.tmp
+.DS_Store
